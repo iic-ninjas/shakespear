@@ -5,6 +5,9 @@ class Shake.Views.IngredientView extends Marionette.ItemView
   events:
     'click': '_onClick'
 
+  onRender: ->
+    @$el.data(id: @model.id)
+
   _onClick: ->
     @$el.toggleClass('selected', !@$el.hasClass('selected'))
 
@@ -20,7 +23,9 @@ class Shake.Views.CreateShakeView extends Marionette.CompositeView
     'click .submit-btn': '_onSubmit'
 
   _onSubmit: ->
-    @model.relation('ingredients').add(@collection.first())
+    ingredientsIds = @$el.find('.ingredient.selected').map((i, el) -> $(el).data('id'))
+    collection = _.map(ingredientsIds, (id) => @collection.get(id))
+    @model.relation('ingredients').add(collection)
     @model.set(name: @ui.nameInput.val())
-    @model.save(null, success: -> alert('yey'))
+    @model.save(null, success: -> window.location.reload())
 
