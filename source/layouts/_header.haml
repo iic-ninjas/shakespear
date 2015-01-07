@@ -1,0 +1,12 @@
+.jumbotron
+  .container
+    .media
+      = link_to '#/', class: 'media-left' do
+        = image_tag 'logo.png'
+      .media-body
+        %h1.media-heading
+          = link_to '#/' do
+            = config.title
+        %p
+          %i "Start your day with a SHAKE"
+          %i.fa.fa-apple

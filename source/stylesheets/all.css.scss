@@ -1,0 +1,144 @@
+@charset "utf-8";
+//@import "normalize";
+
+$navbar-default-bg: #95BCF7;
+$navbar-default-border: $navbar-default-bg;
+$navbar-margin-bottom: 0;
+.navbar.navbar-default{
+  border: none;
+  .navbar-nav > li > a {
+    background: #3365AB;
+  }
+}
+
+$navbar-default-link-hover-bg: #4582dc;
+$navbar-default-link-active-bg: $navbar-default-link-hover-bg;
+$navbar-default-link-active-color: white;
+$navbar-default-link-hover-color: white;
+$navbar-default-link-color: white;
+
+
+$jumbotron-padding: 10px;
+$jumbotron-bg: $navbar-default-bg;
+$jumbotron-color: white;
+
+
+$body-bg: #fff;
+
+@import "font-awesome";
+@import "bootstrap";
+
+
+.user-thumbnail{
+  width: 64px;
+  height: 64px;
+}
+
+footer{
+  margin: 20px 0;
+  text-align: center;
+}
+
+@keyframes equalizer1{
+  0% {
+    height: 100%;
+  }
+  20%{
+    height: 80%;
+  }
+  30%{
+    height: 90%;
+  }
+  70%{
+    height: 40%;
+  }
+  100%{
+    height: 100%;
+  }
+}
+
+@keyframes equalizer2{
+  0% {
+    height: 100%;
+  }
+  20%{
+    height: 10%;
+  }
+  50%{
+    height: 40%;
+  }
+  60%{
+    height: 60%;
+  }
+  100%{
+    height: 100%;
+  }
+}
+
+@keyframes equalizer3{
+  0% {
+    height: 100%;
+  }
+  30%{
+    height: 80%;
+  }
+  40%{
+    height: 90%;
+  }
+  50%{
+    height: 40%;
+  }
+  60%{
+    height: 0%;
+  }
+}
+
+.play-item.active{
+  padding-right: 60px;
+  position: relative;
+  .equalizer{
+    display: block;
+    position: absolute;
+    right: 45px;
+    top: 32px;
+    height: 25px;
+    width: 30px;
+    overflow: hidden;
+    .b1,.b2,.b3{
+      background: white;
+      height: 100%;
+      width: 20%;
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+
+    }
+    .b1{ animation: equalizer1 2s infinite; left: 0}
+    .b2{ animation: equalizer2 2s infinite; left: 30%}
+    .b3{ animation: equalizer3 1.8s infinite; left: 60%}
+  }
+  &:after{
+    content: "\f01d";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-size: 2em;
+    color: white;
+    position: absolute;
+    top: 32px;
+    right: 20px;
+  }
+
+}
+#ytplayer{
+  width: 100%;
+  height: 30px;
+}
+
+.user-avatar{
+  @extend .img-circle;
+  height: 1.3em;
+  width: 1.3em;
+}

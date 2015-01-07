@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title><%= current_page.data.title || config.title %></title>
+    <%= favicon_tag 'iic-balloon-square-favicon.png' %>
+    <%= stylesheet_link_tag "all" %>
+    <%= javascript_include_tag  "all" %>
+  </head>
+
+  <body class="<%= page_classes %>">
+
+  <%= partial "layouts/header" %>
+  <%= yield %>
+  <%= partial "layouts/footer" %>
+  <%= partial "layouts/templates" %>
+  <script>
+    Shake.start();
+  </script>
+
+
+  </body>
+</html>
