@@ -4,4 +4,4 @@
 //= require 'backbone.marionette'
 //= require 'bootstrap'
 //= require_tree './vendors'
-//= require './app/app'
+//= require './app'
