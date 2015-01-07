@@ -8,12 +8,12 @@ window.Shake.addRegions(
   top: '.top'
   main: '.center'
 )
+
 Shake.Models = {}
 Shake.Views = {}
 Shake.Controllers = {}
 
 Shake.addInitializer (options) ->
   Backbone.history.start()
-
 
 Parse.initialize("uwdostKJHj59UqMPm8pS6XO6OspSXBOy7s1IHkJo", "o0IPafacxdIuNIbsirAkULxMn2p28fBMbu7l0abY")
