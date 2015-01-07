@@ -4,4 +4,12 @@
     Loading...
 
 %script#ingredient-view{type: 'text/html'}
-  %h1 <%= name %>
+  .ingredient
+    %span <%= name %>
+
+%script#shake-form-view{type: 'text/html'}
+  %form
+    .row
+      .col-sm-2= 'New shake'
+    %hr
+    .ingredient-list

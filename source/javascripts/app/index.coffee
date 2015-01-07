@@ -6,7 +6,7 @@
 window.Shake = new Marionette.Application()
 window.Shake.addRegions(
   top: '.top'
-  main: '.center'
+  main: '.main'
 )
 
 Shake.Models = {}
