@@ -3,43 +3,5 @@
     %i.fa.fa-spinner.fa-spin
     Loading...
 
-%script#play-index-view{type: 'text/html'}
-  .media
-    .media-left
-      :plain
-        <img class='img-circle user-thumbnail' src='<%= userThumbnail %>'></img>
-    .media-body.media-middle
-      :plain
-        <div class='aside'>
-          <i class='fa fa-user'></i> <%= user %><br/>
-          <i class='fa fa-music'></i> <%= artist %> - <%= name %>
-        </div>
-  .equalizer
-    .b1
-    .b2
-    .b3
-
-%script#edit-index-view{type: 'text/html'}
-  :plain
-    <td ><strong><%= user %></strong></td>
-    <td><input class='form-control' id='artist' type='text' value='<%= artist %>'></td>
-    <td><input class='form-control' id='name' type='text' value='<%= name %>'></td>
-    <td><input class='form-control' id='youtubeId' type='text' value='<%= youtubeId %>'></td>
-    <td><input class='form-control' id='startAtInSeconds' type='number' value></td>
-
-
-%script#play-view{type: 'text/html'}
-  :plain
-    <iframe id="ytplayer" height='400' type="text/html" src="<%= youtubeUrl %>" frameborder="0" allowfullscreen/>
-    <hr/>
-
-%script#user-signed-out-template{type: 'text/html'}
-  %a#sign-in{href: '#sign-in'}
-    %i.fa.fa-user
-    Sign In
-
-%script#user-signed-in-template{type: 'text/html'}
-  %a#sign-out{href: '#sign-out'}
-    :plain
-      <img class='user-avatar' src='<%= avatar %>'></img>
-    <%= first_name %>, Sign Out
+%script#ingredient-view{type: 'text/html'}
+  %h1 <%= name %>
