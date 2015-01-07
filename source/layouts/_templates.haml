@@ -7,8 +7,9 @@
   %span <%= name %>
 
 %script#shake-form-view{type: 'text/html'}
-  %form
-    .row
-      .col-sm-2= 'New shake'
+  .form-inline
+    .form-group
+      %input.form-control.name{:type => 'text', :placeholder => 'Shake name'}
+      %button.submit-btn.form-control.btn-success= 'Create'
     %hr
     .ingredient-list

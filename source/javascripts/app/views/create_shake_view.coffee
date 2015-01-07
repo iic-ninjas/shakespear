@@ -13,3 +13,14 @@ class Shake.Views.CreateShakeView extends Marionette.CompositeView
   childView: Shake.Views.IngredientView
   childViewContainer: '.ingredient-list'
 
+  ui:
+    nameInput: '.name'
+
+  events:
+    'click .submit-btn': '_onSubmit'
+
+  _onSubmit: ->
+    @model.relation('ingredients').add(@collection.first())
+    @model.set(name: @ui.nameInput.val())
+    @model.save(null, success: -> alert('yey'))
+
